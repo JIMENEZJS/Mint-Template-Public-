@@ -281,17 +281,15 @@ p {
   color: #fff;
 }
 
-.brand__badge {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--foam);
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  background: linear-gradient(145deg, #000000, #2a2a2a);
+.brand__logo {
+  width: auto;
+  height: 44px;
+  max-width: 140px;
+  border-radius: 0;
+  object-fit: contain;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .brand__text {

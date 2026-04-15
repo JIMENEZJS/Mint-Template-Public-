@@ -35,7 +35,7 @@ function App() {
       <header className="topbar" id="home">
         <div className="wrapper topbar__content">
           <NavLink className="brand" to="/" onClick={() => setMenuOpen(false)}>
-            <span className="brand__badge">OV</span>
+            <img className="brand__logo" src="/oceansLogo.png" alt="Logo OCEANS del Valle" />
             <span className="brand__text">
               OCEANS del Valle
               <small>Rugby Subacuatico | Cali, Colombia</small>
