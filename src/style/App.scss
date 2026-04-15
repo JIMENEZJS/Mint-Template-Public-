@@ -7,6 +7,8 @@
   --foam: #ffffff;
   --coral: #ffffff;
   --ink: #f5f5f5;
+  --space-section: 8.8rem;
+  --space-card: 2.2rem;
 }
 
 /* Box sizing rules */
@@ -38,7 +40,6 @@ blockquote,
 dl,
 dd {
   margin: 0;
-  font-weight: 500;
 }
 
 /* Set core body defaults */
@@ -84,7 +85,10 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--ink);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.65;
   overflow-x: hidden;
   background:
     radial-gradient(circle at 10% 15%, rgba(255, 255, 255, 0.08), transparent 35%),
@@ -94,7 +98,7 @@ body {
 
 .wrapper {
   max-width: 1200px;
-  padding: 0 15px;
+  padding: 0 20px;
   height: 100%;
   margin: 0 auto;
 }
@@ -180,7 +184,9 @@ a {
 }
 /*********************** FONTS ***********************/
 h1,h2,h3,h4,h5,h6 {
-  font-weight: 500;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  line-height: 1.12;
 }
 .weight500 {
   font-weight: 500;
@@ -233,9 +239,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 3rem;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 1.78;
 }
 // Hover color for navbar
 .active-link {
@@ -256,7 +262,7 @@ p {
 }
 
 .topbar__content {
-  min-height: 72px;
+  min-height: 78px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -299,14 +305,15 @@ p {
 .menu {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .menu a {
   color: #ffffff;
-  font-size: 1.35rem;
-  font-weight: 600;
-  padding: 8px 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 9px 11px;
   border-radius: 8px;
 }
 
@@ -340,6 +347,7 @@ p {
   justify-content: center;
   background: var(--coral);
   color: #000;
+  border: 1px solid #fff;
   border-radius: 999px;
   font-size: 1.35rem;
   font-weight: 700;
@@ -381,30 +389,33 @@ p {
   min-height: 76vh;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 36px;
+  gap: 48px;
   align-items: center;
-  padding-top: 56px;
-  padding-bottom: 56px;
+  padding-top: 72px;
+  padding-bottom: 72px;
 }
 
 .kicker {
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.2em;
   color: rgba(255, 255, 255, 0.82);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .hero h1 {
   font-size: clamp(3.6rem, 5vw, 6.6rem);
-  line-height: 1.05;
-  margin-bottom: 14px;
+  line-height: 0.98;
+  font-weight: 900;
+  margin-bottom: 18px;
   color: #fff;
 }
 
 .hero p {
   max-width: 58ch;
+  font-size: 1.8rem;
+  line-height: 1.7;
   color: rgba(255, 255, 255, 0.92);
 }
 
@@ -441,7 +452,7 @@ p {
 }
 
 .section {
-  padding: 72px 0;
+  padding: var(--space-section) 0;
   color: #ffffff;
   background: #000000;
 }
@@ -463,18 +474,19 @@ p {
 }
 
 .section__head {
-  margin-bottom: 26px;
+  margin-bottom: 34px;
 }
 
 .section h2 {
   font-size: clamp(2.8rem, 4vw, 4.4rem);
-  line-height: 1.12;
-  margin-bottom: 10px;
+  line-height: 1.08;
+  margin-bottom: 16px;
+  font-weight: 800;
 }
 
 .section__grid {
   display: grid;
-  gap: 24px;
+  gap: 32px;
 }
 
 .section__grid--2 {
@@ -485,9 +497,17 @@ p {
 .calendar-card,
 .join-form {
   border-radius: 18px;
-  padding: 24px;
+  padding: 28px;
   background: #fff;
   box-shadow: 0 16px 30px rgba(8, 41, 66, 0.08);
+  color: #0f0f0f;
+}
+
+.info-card h3,
+.info-card p,
+.info-card li,
+.calendar-card h3,
+.calendar-card p {
   color: #0f0f0f;
 }
 
@@ -517,7 +537,7 @@ p {
 
 .cards {
   display: grid;
-  gap: 18px;
+  gap: 24px;
 }
 
 .cards--4 {
@@ -526,15 +546,16 @@ p {
 
 .player-card {
   border-radius: 18px;
-  padding: 16px;
+  padding: var(--space-card);
   background: #fff;
   box-shadow: 0 16px 26px rgba(8, 41, 66, 0.08);
   color: #0f0f0f;
 }
 
 .player-card h3 {
-  margin-top: 10px;
-  font-size: 2rem;
+  margin-top: 12px;
+  font-size: 2.2rem;
+  font-weight: 800;
 }
 
 .player-card p {
@@ -556,8 +577,9 @@ p {
   display: grid;
   grid-template-columns: 1.1fr 0.7fr 1.2fr;
   gap: 12px;
-  padding: 14px 16px;
+  padding: 16px 18px;
   background: #fff;
+  color: #111;
   border-bottom: 1px solid rgba(6, 43, 69, 0.08);
 }
 
@@ -569,6 +591,26 @@ p {
   background: var(--ocean-deep);
   color: #fff;
   font-weight: 700;
+}
+
+.results-row span {
+  color: inherit;
+}
+
+.calendar-card .btn,
+.info-card .btn,
+.player-card .btn,
+.results-table .btn {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.calendar-card .btn:hover,
+.info-card .btn:hover,
+.player-card .btn:hover,
+.results-table .btn:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
 }
 
 .gallery-grid {
@@ -595,11 +637,17 @@ p {
 
 .join-form {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   background: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.24);
   box-shadow: none;
   color: #ffffff;
+}
+
+.join-form label {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 .join-form input,
@@ -626,8 +674,8 @@ p {
 }
 
 .footer__content {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr auto;
   gap: 20px;
@@ -751,17 +799,17 @@ p {
 
 @media (max-width: 640px) {
   .section {
-    padding: 54px 0;
+    padding: 62px 0;
   }
 
   .hero__content {
     min-height: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3.9rem;
   }
 
   .brand__text small {
