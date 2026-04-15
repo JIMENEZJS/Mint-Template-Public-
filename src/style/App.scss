@@ -262,18 +262,18 @@ p {
 }
 
 .topbar__content {
-  min-height: 78px;
+  min-height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   position: relative;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   color: var(--ink);
 }
 
@@ -282,27 +282,28 @@ p {
 }
 
 .brand__badge {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--foam);
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   background: linear-gradient(145deg, #000000, #2a2a2a);
 }
 
 .brand__text {
   display: inline-flex;
   flex-direction: column;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1;
+  font-size: 1.32rem;
 }
 
 .brand__text small {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   opacity: 0.75;
 }
@@ -315,7 +316,7 @@ p {
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  gap: 22px;
+  gap: 14px;
   overflow: visible;
 }
 
@@ -328,10 +329,10 @@ p {
   background: transparent;
   color: rgba(255, 255, 255, 0.72);
   border-radius: 0;
-  padding: 6px 2px;
-  font-size: 1.32rem;
+  padding: 4px 1px;
+  font-size: 1.12rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
   cursor: pointer;
@@ -722,6 +723,59 @@ p {
   gap: 5px;
 }
 
+.contact-links {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-links--columns {
+  grid-template-columns: repeat(2, minmax(210px, 1fr));
+  column-gap: 18px;
+  row-gap: 8px;
+}
+
+.contact-links li {
+  list-style: none;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: inherit;
+  font-size: 1.38rem;
+  font-weight: 500;
+}
+
+.contact-links a:hover {
+  opacity: 0.86;
+}
+
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 28px;
+  opacity: 0.92;
+}
+
+.contact-icon > * {
+  width: 15px;
+  height: 15px;
+}
+
+.info-card .contact-links a {
+  color: #0f0f0f;
+}
+
+.footer .contact-links a {
+  color: rgba(244, 251, 255, 0.92);
+}
+
 .image-placeholder {
   border: 1px dashed rgba(244, 251, 255, 0.4);
   border-radius: 18px;
@@ -824,6 +878,10 @@ p {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .contact-links--columns {
+    grid-template-columns: 1fr;
   }
 
   .menu__tab {

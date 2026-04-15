@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, Route, Switch, useHistory } from 'react-router-dom';
 import './style/App.scss';
 import { players, results } from './data/siteData';
+import ContactLinks from './components/ContactLinks';
 import {
   ContactoPage,
   EntrenamientosPage,
@@ -99,11 +100,7 @@ function App() {
             <h3>OCEANS del Valle</h3>
             <p>Rugby subacuatico en Cali, Colombia.</p>
           </div>
-          <ul>
-            <li>WhatsApp: +57 300 000 0000</li>
-            <li>Instagram: @oceansdelvalle</li>
-            <li>Email: contacto@oceansdelvalle.com</li>
-          </ul>
+          <ContactLinks className="contact-links--columns" />
           <NavLink className="btn btn--sm" to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             Volver a Inicio
           </NavLink>

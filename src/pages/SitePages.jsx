@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactLinks from '../components/ContactLinks';
 
 export function InicioPage({ onGoToUnete }) {
   return (
@@ -214,11 +215,7 @@ export function ContactoPage() {
         </article>
         <aside className="info-card">
           <h3>Canales de contacto</h3>
-          <ul>
-            <li>WhatsApp: +57 300 000 0000</li>
-            <li>Instagram: @oceansdelvalle</li>
-            <li>Email: contacto@oceansdelvalle.com</li>
-          </ul>
+          <ContactLinks className="contact-links--columns" />
         </aside>
       </div>
     </section>
