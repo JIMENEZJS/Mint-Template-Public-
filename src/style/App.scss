@@ -1,12 +1,12 @@
 @import './colors.scss';
 
 :root {
-  --ocean-deep: #062b45;
-  --ocean-mid: #0b486b;
-  --ocean-accent: #00b3b8;
-  --foam: #f4fbff;
-  --coral: #ff6b4a;
-  --ink: #0e1d2f;
+  --ocean-deep: #000000;
+  --ocean-mid: #111111;
+  --ocean-accent: #ffffff;
+  --foam: #ffffff;
+  --coral: #ffffff;
+  --ink: #f5f5f5;
 }
 
 /* Box sizing rules */
@@ -87,9 +87,9 @@ body {
   font-size: 1.5rem;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 10% 15%, rgba(0, 179, 184, 0.2), transparent 35%),
-    radial-gradient(circle at 90% 10%, rgba(255, 107, 74, 0.12), transparent 42%),
-    linear-gradient(180deg, #f9feff 0%, #eef7fb 100%);
+    radial-gradient(circle at 10% 15%, rgba(255, 255, 255, 0.08), transparent 35%),
+    radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.06), transparent 42%),
+    linear-gradient(180deg, #000000 0%, #080808 100%);
 }
 
 .wrapper {
@@ -239,7 +239,7 @@ p {
 }
 // Hover color for navbar
 .active-link {
-  color: $main-color;
+  color: #ffffff;
 }
 
 .oceans-site {
@@ -251,8 +251,8 @@ p {
   top: 0;
   z-index: 30;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(6, 43, 69, 0.08);
-  background: rgba(244, 251, 255, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.88);
 }
 
 .topbar__content {
@@ -280,7 +280,7 @@ p {
   color: var(--foam);
   font-weight: 700;
   letter-spacing: 0.05em;
-  background: linear-gradient(145deg, var(--ocean-deep), var(--ocean-accent));
+  background: linear-gradient(145deg, #000000, #2a2a2a);
 }
 
 .brand__text {
@@ -303,7 +303,7 @@ p {
 }
 
 .menu a {
-  color: var(--ocean-deep);
+  color: #ffffff;
   font-size: 1.35rem;
   font-weight: 600;
   padding: 8px 10px;
@@ -311,8 +311,8 @@ p {
 }
 
 .menu a:hover {
-  color: var(--ocean-accent);
-  background: rgba(0, 179, 184, 0.08);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .menu-toggle {
@@ -330,7 +330,7 @@ p {
   width: 24px;
   height: 2px;
   border-radius: 20px;
-  background: var(--ocean-deep);
+  background: #ffffff;
 }
 
 .btn {
@@ -339,7 +339,7 @@ p {
   align-items: center;
   justify-content: center;
   background: var(--coral);
-  color: #fff;
+  color: #000;
   border-radius: 999px;
   font-size: 1.35rem;
   font-weight: 700;
@@ -351,7 +351,7 @@ p {
 
 .btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(255, 107, 74, 0.25);
+  box-shadow: 0 10px 24px rgba(255, 255, 255, 0.22);
 }
 
 .btn--sm {
@@ -361,20 +361,20 @@ p {
 
 .btn--ghost {
   background: transparent;
-  color: var(--ocean-deep);
-  border: 1px solid rgba(6, 43, 69, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 .btn--ghost:hover {
   box-shadow: none;
-  background: rgba(6, 43, 69, 0.07);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .hero {
   color: var(--foam);
   background:
-    linear-gradient(120deg, rgba(6, 43, 69, 0.96), rgba(11, 72, 107, 0.9) 58%, rgba(0, 179, 184, 0.85)),
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2), transparent 35%);
+    linear-gradient(120deg, rgba(0, 0, 0, 0.98), rgba(15, 15, 15, 0.95) 58%, rgba(32, 32, 32, 0.92)),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.14), transparent 35%);
 }
 
 .hero__content {
@@ -392,7 +392,7 @@ p {
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.14em;
-  color: var(--ocean-accent);
+  color: rgba(255, 255, 255, 0.82);
   margin-bottom: 10px;
 }
 
@@ -442,15 +442,17 @@ p {
 
 .section {
   padding: 72px 0;
+  color: #ffffff;
+  background: #000000;
 }
 
 .section--alt {
-  background: linear-gradient(180deg, rgba(6, 43, 69, 0.03), rgba(0, 179, 184, 0.07));
+  background: linear-gradient(180deg, #0a0a0a, #121212);
 }
 
 .section--cta {
   color: var(--foam);
-  background: linear-gradient(125deg, #07253d, #0e496f 50%, #056d75);
+  background: linear-gradient(125deg, #000000, #111111 50%, #1a1a1a);
 }
 
 .section--cta .kicker,
@@ -486,6 +488,7 @@ p {
   padding: 24px;
   background: #fff;
   box-shadow: 0 16px 30px rgba(8, 41, 66, 0.08);
+  color: #0f0f0f;
 }
 
 .info-card ul,
@@ -506,7 +509,7 @@ p {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--ocean-accent);
+  background: #000000;
   position: absolute;
   left: 0;
   top: 8px;
@@ -526,6 +529,7 @@ p {
   padding: 16px;
   background: #fff;
   box-shadow: 0 16px 26px rgba(8, 41, 66, 0.08);
+  color: #0f0f0f;
 }
 
 .player-card h3 {
@@ -539,13 +543,13 @@ p {
 }
 
 .player-card small {
-  color: #44657d;
+  color: #4d4d4d;
 }
 
 .results-table {
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(6, 43, 69, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .results-row {
@@ -592,16 +596,17 @@ p {
 .join-form {
   display: grid;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   box-shadow: none;
+  color: #ffffff;
 }
 
 .join-form input,
 .join-form select {
   border: 1px solid rgba(255, 255, 255, 0.34);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
   color: #fff;
   font-size: 1.4rem;
   padding: 10px 12px;
@@ -616,7 +621,7 @@ p {
 }
 
 .footer {
-  background: #041f33;
+  background: #000000;
   color: rgba(244, 251, 255, 0.85);
 }
 
@@ -678,7 +683,7 @@ p {
 .image-placeholder--player {
   min-height: 170px;
   color: var(--ocean-deep);
-  border-color: rgba(6, 43, 69, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 @keyframes revealUp {
@@ -732,7 +737,7 @@ p {
     width: min(280px, 90vw);
     border-radius: 12px;
     padding: 12px;
-    background: #fff;
+    background: #111111;
     box-shadow: 0 20px 32px rgba(5, 27, 43, 0.18);
     display: none;
     flex-direction: column;
