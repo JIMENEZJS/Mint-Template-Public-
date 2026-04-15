@@ -19,20 +19,6 @@ export function InicioPage({ onGoToUnete }) {
               Ver horarios
             </button>
           </div>
-          <ul className="hero__metrics">
-            <li>
-              <strong>6</strong>
-              <span>Dias activos por semana</span>
-            </li>
-            <li>
-              <strong>42</strong>
-              <span>Jugadores formados</span>
-            </li>
-            <li>
-              <strong>9</strong>
-              <span>Podios en 3 temporadas</span>
-            </li>
-          </ul>
         </div>
 
         <div className="hero__visual" aria-hidden="true">
