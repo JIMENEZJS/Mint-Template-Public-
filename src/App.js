@@ -100,7 +100,7 @@ function App() {
             <h3>OCEANS del Valle</h3>
             <p>Rugby subacuatico en Cali, Colombia.</p>
           </div>
-          <ContactLinks className="contact-links--columns" />
+          <ContactLinks className="contact-links--compact" variant="compact" includeLocation={false} />
           <NavLink className="btn btn--sm" to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             Volver a Inicio
           </NavLink>

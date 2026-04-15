@@ -40,16 +40,25 @@ const items = [
   }
 ];
 
-function ContactLinks({ className = '' }) {
+function ContactLinks({ className = '', variant = 'full', includeLocation = true }) {
+  const compact = variant === 'compact';
+  const visibleItems = includeLocation ? items : items.filter((item) => item.id !== 'location');
+
   return (
     <ul className={`contact-links ${className}`.trim()}>
-      {items.map((item) => (
+      {visibleItems.map((item) => (
         <li key={item.id}>
-          <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={`${item.label}: ${item.value}`}>
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${item.label}: ${item.value}`}
+            title={`${item.label}: ${item.value}`}
+          >
             <span className="contact-icon" aria-hidden="true">
               {item.icon}
             </span>
-            <span>{item.value}</span>
+            {!compact && <span>{item.value}</span>}
           </a>
         </li>
       ))}
