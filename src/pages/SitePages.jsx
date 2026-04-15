@@ -36,8 +36,8 @@ export function InicioPage({ onGoToUnete }) {
 export function NosotrosPage() {
   return (
     <section className="section" id="nosotros">
-      <div className="wrapper section__grid section__grid--2">
-        <article>
+      <div className="wrapper nosotros-layout">
+        <article className="nosotros-main text-center">
           <p className="kicker">Nosotros</p>
           <h2>OCEANS del Valle: disciplina, comunidad y crecimiento.</h2>
           <p>
@@ -49,13 +49,26 @@ export function NosotrosPage() {
             colectivo en escenarios de alta presion.
           </p>
         </article>
-        <aside className="info-card">
+        <aside className="info-card nosotros-diff">
           <h3>Que nos diferencia</h3>
-          <ul>
-            <li>Metodologia de iniciacion para principiantes</li>
-            <li>Preparacion especifica para competencias nacionales</li>
-            <li>Acompanamiento tecnico y cultura de equipo</li>
-          </ul>
+          <p className="info-card__intro">Formamos desde cero, pero entrenamos con mentalidad competitiva.</p>
+          <div className="differentiators">
+            <article className="differentiator-item">
+              <span className="differentiator-tag">Base tecnica</span>
+              <h4>Ruta para principiantes</h4>
+              <p>Plan progresivo de adaptacion en apnea, control de puck y juego colectivo.</p>
+            </article>
+            <article className="differentiator-item">
+              <span className="differentiator-tag">Alto rendimiento</span>
+              <h4>Preparacion competitiva</h4>
+              <p>Microciclos de entrenamiento para torneos regionales y nacionales.</p>
+            </article>
+            <article className="differentiator-item">
+              <span className="differentiator-tag">Cultura OCEANS</span>
+              <h4>Acompanamiento integral</h4>
+              <p>Seguimiento tecnico, cohesion de equipo y enfoque en mejora continua.</p>
+            </article>
+          </div>
         </aside>
       </div>
     </section>

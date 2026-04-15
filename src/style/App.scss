@@ -522,6 +522,28 @@ p {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.nosotros-layout {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
+
+.nosotros-main {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.nosotros-main p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nosotros-diff {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
 .info-card,
 .calendar-card,
 .join-form {
@@ -538,6 +560,56 @@ p {
 .calendar-card h3,
 .calendar-card p {
   color: #0f0f0f;
+}
+
+.info-card__intro {
+  margin-bottom: 14px;
+  font-size: 1.45rem;
+  line-height: 1.55;
+}
+
+.differentiators {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.differentiator-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.differentiator-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #101010;
+  border-radius: 999px;
+  padding: 4px 9px;
+  margin-bottom: 8px;
+}
+
+.differentiator-item h4 {
+  margin: 0 0 5px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: #0f0f0f;
+}
+
+.differentiator-item p {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: #353535;
 }
 
 .info-card ul,
@@ -853,6 +925,10 @@ p {
   .gallery-grid__item {
     grid-column: span 1;
   }
+
+  .differentiators {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 860px) {
@@ -908,6 +984,10 @@ p {
     min-height: auto;
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  .differentiators {
+    grid-template-columns: 1fr;
   }
 
   .hero h1 {
