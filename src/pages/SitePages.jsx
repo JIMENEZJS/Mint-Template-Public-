@@ -218,17 +218,33 @@ export function GaleriaPage() {
 export function ContactoPage() {
   return (
     <section className="section" id="contacto-page">
-      <div className="wrapper section__grid section__grid--2">
-        <article>
+      <div className="wrapper section__grid section__grid--2 contact-layout">
+        <article className="contact-layout__intro">
           <p className="kicker">Contacto</p>
           <h2>Hablemos y empieza tu primera sesion.</h2>
           <p>
             Escríbenos por WhatsApp o redes sociales y te guiamos para ingresar al equipo según tu nivel actual.
           </p>
         </article>
-        <aside className="info-card">
+        <aside className="info-card contact-panel">
           <h3>Canales de contacto</h3>
-          <ContactLinks className="contact-links--columns" />
+          <p className="info-card__intro">Selecciona tu canal favorito y te respondemos lo antes posible.</p>
+
+          <div className="contact-quick-actions">
+            <a className="btn btn--sm" href="https://wa.me/573006748502" target="_blank" rel="noopener noreferrer">
+              Escribir por WhatsApp
+            </a>
+            <a
+              className="btn btn--sm btn--ghost-dark"
+              href="https://www.google.com/maps/search/?api=1&query=Piscinas+Alberto+Galindo+Cali"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver ubicacion
+            </a>
+          </div>
+
+          <ContactLinks className="contact-links--cards" variant="cards" />
         </aside>
       </div>
     </section>

@@ -42,6 +42,7 @@ const items = [
 
 function ContactLinks({ className = '', variant = 'full', includeLocation = true }) {
   const compact = variant === 'compact';
+  const cards = variant === 'cards';
   const visibleItems = includeLocation ? items : items.filter((item) => item.id !== 'location');
 
   return (
@@ -58,7 +59,13 @@ function ContactLinks({ className = '', variant = 'full', includeLocation = true
             <span className="contact-icon" aria-hidden="true">
               {item.icon}
             </span>
-            {!compact && <span>{item.value}</span>}
+            {!compact && !cards && <span>{item.value}</span>}
+            {cards && (
+              <span className="contact-card-copy">
+                <strong>{item.label}</strong>
+                <span>{item.value}</span>
+              </span>
+            )}
           </a>
         </li>
       ))}
