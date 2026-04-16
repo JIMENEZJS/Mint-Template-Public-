@@ -4,12 +4,27 @@
   padding-top: 240px;
   width: 100%;
   padding-bottom: 60px;
+  
   .hero-info {
     padding-top: 60px;
+    animation: fadeInLeft 1s ease-out;
+
+    h1 {
+      animation: slideInLeft 0.8s ease-out;
+      
+      &:last-of-type {
+        animation: slideInLeft 0.8s ease-out 0.2s backwards;
+      }
+    }
 
     p {
       padding-top: 20px;
       padding-bottom: 50px;
+      animation: fadeInUp 1s ease-out 0.4s backwards;
+    }
+
+    .button {
+      animation: bounceIn 0.8s ease-out 0.6s backwards;
     }
   }
 
@@ -17,6 +32,17 @@
     max-width: 570px;
     height: auto;
     float: right;
+    animation: fadeInRight 1s ease-out 0.3s backwards;
+    
+    img {
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.3));
+      }
+    }
   }
 }
 
@@ -32,6 +58,7 @@
       float: none;
       margin: 0 auto;
       margin-top: 50px;
+      animation: fadeInUp 1s ease-out 0.3s backwards;
     }
   }
 }
@@ -40,6 +67,14 @@
   .hero {
     .hero-info {
       text-align: center;
+      
+      h1 {
+        animation: slideInDown 0.8s ease-out;
+        
+        &:last-of-type {
+          animation: slideInDown 0.8s ease-out 0.2s backwards;
+        }
+      }
     }
   }
 }

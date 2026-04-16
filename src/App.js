@@ -38,7 +38,7 @@ function App() {
             <img className="brand__logo" src="/oceansLogo.png" alt="Logo OCEANS del Valle" />
             <span className="brand__text">
               OCEANS del Valle
-              <small>Rugby Subacuatico | Cali, Colombia</small>
+              <small>Actividades Subacuaticas | Cali, Colombia</small>
             </span>
           </NavLink>
 
