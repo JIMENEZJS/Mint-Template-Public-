@@ -608,6 +608,73 @@ p {
   color: #0f0f0f;
 }
 
+.calendar-card {
+  display: grid;
+  gap: 12px;
+}
+
+.calendar-card__intro {
+  font-size: 1.42rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.calendar-card__custom {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+
+.calendar-row {
+  display: grid;
+  grid-template-columns: 0.8fr 1.1fr 1fr;
+  gap: 10px;
+  padding: 12px 14px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  color: #111;
+}
+
+.calendar-row:last-child {
+  border-bottom: 0;
+}
+
+.calendar-row span {
+  color: inherit;
+  font-size: 1.32rem;
+  line-height: 1.35;
+}
+
+.calendar-row--head {
+  background: #0f0f0f;
+}
+
+.calendar-row--head span {
+  color: #fff;
+  font-size: 1.18rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.calendar-day {
+  font-weight: 700;
+}
+
+.calendar-level {
+  display: block;
+  margin-top: 3px;
+  font-size: 1.12rem;
+  color: #555;
+}
+
+.calendar-card__actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2px;
+}
+
 .info-card__intro {
   margin-bottom: 14px;
   font-size: 1.45rem;
@@ -764,6 +831,31 @@ p {
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.gallery-video {
+  margin-bottom: 18px;
+}
+
+.gallery-video__frame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #050505;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+}
+
+.gallery-video__player {
+  width: 100%;
+  display: block;
+  max-height: 520px;
+  background: #000;
+}
+
+.gallery-video__caption {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .gallery-grid__item {
@@ -1102,6 +1194,10 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .gallery-video__player {
+    max-height: 380px;
+  }
+
   .gallery-grid__item {
     grid-column: span 1;
   }
@@ -1112,6 +1208,11 @@ p {
 
   .contact-links--cards {
     grid-template-columns: 1fr;
+  }
+
+  .calendar-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 }
 

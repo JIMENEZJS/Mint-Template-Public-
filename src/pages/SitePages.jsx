@@ -137,29 +137,62 @@ export function UnetePage() {
 }
 
 export function EntrenamientosPage() {
+  const weeklySchedule = [
+    { day: 'Martes', time: '9pm a 10pm', modality: 'Entrenamiento masculino', level: 'UWR' },
+    { day: 'Miercoles', time: '9pm a 10pm', modality: 'Entrenamiento masculino', level: 'UWR' },
+    { day: 'Viernes', time: '9pm a 10pm', modality: 'Entrenamiento masculino', level: 'UWR' },
+    { day: 'Domingo', time: '12pm a 1pm', modality: 'Entrenamiento masculino', level: 'UWR' }
+  ];
+
   return (
     <section className="section" id="entrenamientos">
       <div className="wrapper section__grid section__grid--2">
+        <aside className="calendar-card">
+          <h3>Calendario semanal OCEANS</h3>
+          <p className="calendar-card__intro">Horarios oficiales de entrenamiento sin depender de plataformas externas.</p>
+
+          <div className="calendar-card__custom" role="table" aria-label="Calendario semanal de entrenamientos">
+            <div className="calendar-row calendar-row--head" role="row">
+              <span>Dia</span>
+              <span>Horario</span>
+              <span>Sesion</span>
+            </div>
+            {weeklySchedule.map((session) => (
+              <div key={session.day} className="calendar-row" role="row">
+                <span className="calendar-day">{session.day}</span>
+                <span>{session.time}</span>
+                <span>
+                  {session.modality}
+                  <small className="calendar-level">{session.level}</small>
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="calendar-card__actions">
+            <a
+              className="btn btn--sm"
+              href="https://wa.me/573006748502?text=Hola%2C%20quiero%20reservar%20clase%20de%20prueba%20con%20OCEANS"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reservar clase de prueba
+            </a>
+          </div>
+        </aside>
         <article>
           <p className="kicker">Entrenamientos</p>
-          <h2>Tu primera inmersion puede ser esta semana.</h2>
+          <h2>Horarios de entrenamiento masculino.</h2>
           <p>
             Si sabes nadar, puedes iniciar. Te guiamos con progresion tecnica en apnea, control del puck,
             transiciones y juego colectivo.
           </p>
+          <p>
+            Revisa nuestros horarios actualizados en el calendario de esta seccion y reserva tu clase de prueba.
+          </p>
           <ul className="list-check">
-            <li>Lunes, miercoles y viernes: 7:00 p.m. - 9:00 p.m.</li>
-            <li>Sabado: bloque tactico y partido interno</li>
-            <li>Sede principal: complejo acuatico en Cali</li>
           </ul>
         </article>
-        <aside className="calendar-card">
-          <h3>Calendario rapido</h3>
-          <p>Integra aqui Google Calendar o una vista mensual editable.</p>
-          <button className="btn btn--sm" type="button">
-            Reservar clase de prueba
-          </button>
-        </aside>
       </div>
     </section>
   );
@@ -200,10 +233,21 @@ export function GaleriaPage() {
           <p className="kicker">Galeria</p>
           <h2>Así se vive OCEANS desde adentro.</h2>
         </div>
+
+        <div className="gallery-video">
+          <div className="gallery-video__frame">
+            <video className="gallery-video__player" controls preload="metadata" playsInline>
+              <source src="/VideoOceans1.mp4" type="video/mp4" />
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+          <p className="gallery-video__caption">Video destacado: entreno y ambiente de OCEANS.</p>
+        </div>
+
         <div className="gallery-grid">
           {[1, 2, 3, 4, 5, 6].map((slot) => (
             <div key={slot} className={`image-placeholder gallery-grid__item gallery-grid__item--${slot}`}>
-              <p>Foto / Video {slot}</p>
+              <p>Foto {slot}</p>
             </div>
           ))}
         </div>
