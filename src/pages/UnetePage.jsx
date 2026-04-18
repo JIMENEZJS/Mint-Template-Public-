@@ -89,7 +89,7 @@ function UnetePage({ results }) {
         <div className="wrapper">
           <div className="section__head">
             <p className="kicker">Galeria</p>
-            <h2>Asi se ve el rugby subacuatico desde adentro.</h2>
+            <h2>Así se vive OCEANS desde adentro.</h2>
           </div>
           <div className="gallery-grid">
             {[1, 2, 3, 4, 5, 6].map((slot) => (

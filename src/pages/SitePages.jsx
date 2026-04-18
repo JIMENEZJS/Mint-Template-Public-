@@ -9,7 +9,7 @@ export function InicioPage({ onGoToUnete }) {
           <p className="kicker">Alto rendimiento, puertas abiertas a principiantes</p>
           <h1>Fuerza y estrategia bajo el agua.</h1>
           <p>
-            En OCEANS del Valle entrenamos rugby subacuatico con mentalidad competitiva y procesos
+            En OCEANS del Valle entrenamos rugby (UWR) y hockey (UWH) subacuáticos con mentalidad competitiva y procesos
             formativos para quienes empiezan desde cero.
           </p>
           <div className="hero__cta">
@@ -23,10 +23,7 @@ export function InicioPage({ onGoToUnete }) {
         </div>
 
         <div className="hero__visual" aria-hidden="true">
-          <div className="image-placeholder image-placeholder--xl">
-            <p>Placeholder Hero</p>
-            <small>Foto/video del equipo bajo el agua</small>
-          </div>
+          <img src="/FotoOceans.webp" alt="Equipo OCEANS del Valle bajo el agua" className="hero__image" />
         </div>
       </div>
     </section>
@@ -41,7 +38,7 @@ export function NosotrosPage() {
           <p className="kicker">Nosotros</p>
           <h2>OCEANS del Valle: disciplina, comunidad y crecimiento.</h2>
           <p>
-            Somos un equipo de rugby subacuatico de Cali que combina exigencia deportiva con una ruta de
+            Somos un equipo de rugby (UWR) y hockey (UWH) subacuáticos de Cali que combina exigencia deportiva con una ruta de
             aprendizaje clara para nuevos integrantes.
           </p>
           <p>
@@ -201,7 +198,7 @@ export function GaleriaPage() {
       <div className="wrapper">
         <div className="section__head">
           <p className="kicker">Galeria</p>
-          <h2>Asi se ve el rugby subacuatico desde adentro.</h2>
+          <h2>Así se vive OCEANS desde adentro.</h2>
         </div>
         <div className="gallery-grid">
           {[1, 2, 3, 4, 5, 6].map((slot) => (
@@ -246,6 +243,68 @@ export function ContactoPage() {
 
           <ContactLinks className="contact-links--cards" variant="cards" />
         </aside>
+      </div>
+    </section>
+  );
+}
+
+export function PorQueOceansPage({ benefits }) {
+  return (
+    <section className="section" id="por-que-oceans">
+      <div className="wrapper">
+        <div className="section__head text-center">
+          <p className="kicker">Por que OCEANS</p>
+          <h2>Mas que un deporte, es una experiencia transformadora.</h2>
+          <p>Descubre los beneficios de entrenar rugby y hockey subacuaticos con nosotros.</p>
+        </div>
+        <div className="benefits-grid">
+          {benefits.map((benefit, index) => (
+            <article key={benefit.title} className="benefit-card">
+              <div className="benefit-card__counter">{String(index + 1).padStart(2, '0')}</div>
+              <div className="benefit-card__content">
+                <h3>{benefit.title}</h3>
+                <p>{benefit.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function PatrocinadoresPage({ sponsors }) {
+  return (
+    <section className="section" id="patrocinadores">
+      <div className="wrapper">
+        <div className="section__head">
+          <p className="kicker">Patrocinadores</p>
+          <h2>Organizaciones que creen en OCEANS.</h2>
+          <p>Nuestros aliados hacen posible que sigamos compitiendo y formando talento.</p>
+        </div>
+        <div className="sponsors-grid">
+          <div className="sponsors-list">
+            {sponsors.map((sponsor) => (
+              <div key={sponsor.name} className="sponsor-item">
+                <div className="sponsor-logo">
+                  <div className="image-placeholder image-placeholder--sponsor">
+                    <p>{sponsor.name.substring(0, 3).toUpperCase()}</p>
+                  </div>
+                </div>
+                <div className="sponsor-info">
+                  <h4>{sponsor.name}</h4>
+                  <span className="sponsor-category">{sponsor.category}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="sponsorship-cta">
+          <p>¿Tu empresa quiere ser parte de OCEANS?</p>
+          <a className="btn btn--sm" href="https://wa.me/573006748502" target="_blank" rel="noopener noreferrer">
+            Contacta nuestro equipo comercial
+          </a>
+        </div>
       </div>
     </section>
   );

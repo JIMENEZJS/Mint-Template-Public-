@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Route, Switch, useHistory } from 'react-router-dom';
 import './style/App.scss';
-import { players, results } from './data/siteData';
+import { players, results, benefits, sponsors } from './data/siteData';
 import ContactLinks from './components/ContactLinks';
 import {
   ContactoPage,
@@ -10,6 +10,8 @@ import {
   GaleriaPage,
   InicioPage,
   NosotrosPage,
+  PorQueOceansPage,
+  PatrocinadoresPage,
   TorneosPage,
   UnetePage
 } from './pages/SitePages';
@@ -75,11 +77,13 @@ function App() {
           <Route exact path="/">
             <InicioPage onGoToUnete={goToUnete} />
             <NosotrosPage />
+            <PorQueOceansPage benefits={benefits} />
           </Route>
           <Route path="/equipo">
             <EquipoPage players={players} />
             <TorneosPage results={results} />
             <GaleriaPage />
+            <PatrocinadoresPage sponsors={sponsors} />
           </Route>
           <Route path="/unete">
             <UnetePage />
@@ -98,7 +102,7 @@ function App() {
         <div className="wrapper footer__content">
           <div>
             <h3>OCEANS del Valle</h3>
-            <p>Rugby subacuatico en Cali, Colombia.</p>
+            <p>Rugby (UWR) y hockey (UWH) subacuáticos en Cali, Colombia.</p>
           </div>
           <ContactLinks className="contact-links--compact" variant="compact" includeLocation={false} />
           <NavLink className="btn btn--sm" to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>

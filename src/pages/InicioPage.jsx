@@ -9,7 +9,7 @@ function InicioPage({ players, onGoToUnete }) {
             <p className="kicker">Alto rendimiento, puertas abiertas a principiantes</p>
             <h1>Fuerza y estrategia bajo el agua.</h1>
             <p>
-              En OCEANS del Valle entrenamos rugby subacuatico con mentalidad competitiva y procesos
+              En OCEANS del Valle entrenamos rugby (UWR) y hockey (UWH) subacuáticos con mentalidad competitiva y procesos
               formativos para quienes empiezan desde cero.
             </p>
             <div className="hero__cta">
@@ -51,7 +51,7 @@ function InicioPage({ players, onGoToUnete }) {
             <p className="kicker">Nosotros</p>
             <h2>OCEANS del Valle: disciplina, comunidad y crecimiento.</h2>
             <p>
-              Somos un equipo de rugby subacuatico de Cali que combina exigencia deportiva con una ruta de
+              Somos un equipo de rugby (UWR) y hockey (UWH) subacuáticos de Cali que combina exigencia deportiva con una ruta de
               aprendizaje clara para nuevos integrantes.
             </p>
             <p>
